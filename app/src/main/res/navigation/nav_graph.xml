@@ -10,6 +10,14 @@
         android:name="com.example.barbersapplication.LogInPage"
         android:label="fragment_log_in_page"
         tools:layout="@layout/fragment_log_in_page" />
+
+    <fragment
+        android:id="@+id/fragment_sign_up_as_barber"
+        android:name="com.example.barbersapplication.SignUpAsBarberPage"
+        android:label="fragment_sign_up_as_barber"
+        tools:layout="@layout/fragment_sign_up_as_barber_page"
+        />
+
     <fragment
         android:id="@+id/signUpAsBarberPage"
         android:name="com.example.barbersapplication.SignUpAsBarberPage"
