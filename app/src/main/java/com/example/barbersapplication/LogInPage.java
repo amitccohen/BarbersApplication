@@ -1,19 +1,18 @@
 package com.example.barbersapplication;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link test_fragment#newInstance} factory method to
+ * Use the {@link LogInPage#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
-public class test_fragment extends Fragment {
+public class LogInPage extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,26 +23,26 @@ public class test_fragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public test_fragment() {
-        // Required empty public constructor
-    }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment test_fragment.
+     * @return A new instance of fragment LogInPage.
      */
     // TODO: Rename and change types and number of parameters
-    public static test_fragment newInstance(String param1, String param2) {
-        test_fragment fragment = new test_fragment();
+    public static LogInPage newInstance(String param1, String param2) {
+        LogInPage fragment = new LogInPage();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public LogInPage() {
+        // Required empty public constructor
     }
 
     @Override
@@ -59,6 +58,6 @@ public class test_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_test_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_log_in_page, container, false);
     }
 }
