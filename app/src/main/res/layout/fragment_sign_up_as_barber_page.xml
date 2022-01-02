@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpAsBarberPage" >
+
+    <TextView
+        android:id="@+id/signupasbarber_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Username :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signupasbarber_ownername_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Owner name :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_username_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_username_tv" />
+
+    <TextView
+        android:id="@+id/signupasbarber_barbershopphone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Barber phone :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_barbershopemail_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_barbershopemail_tv" />
+
+    <TextView
+        android:id="@+id/signupasbarber_barbershopemail_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Barber Email :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_barbershopname_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_barbershopname_tv" />
+
+    <TextView
+        android:id="@+id/signupasbarber_password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Barber password :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_barbershopaddress_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_barbershopaddress_tv" />
+
+    <TextView
+        android:id="@+id/signupasbarber_barbershopaddress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Barber address :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_barbershopphone_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_barbershopphone_tv" />
+
+    <TextView
+        android:id="@+id/signupasbarber_barbershopname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Barber name :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_ownername_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_ownername_tv" />
+
+    <EditText
+        android:id="@+id/signupasbarber_username_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_username_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_username_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_username_tv" />
+
+    <EditText
+        android:id="@+id/signupasbarber_ownername_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="owner name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_ownername_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_ownername_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_ownername_tv" />
+
+    <EditText
+        android:id="@+id/signupasbarber_barbername_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="barber name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_barbershopname_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_barbershopname_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_barbershopname_tv" />
+
+    <EditText
+        android:id="@+id/signupasbarber_barberemail_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_barbershopemail_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_barbershopemail_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_barbershopemail_tv" />
+
+    <EditText
+        android:id="@+id/signupasbarber_barberphone_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_barbershopphone_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_barbershopphone_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_barbershopphone_tv" />
+
+    <EditText
+        android:id="@+id/signupasbarber_barberaddress_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="address"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_barbershopaddress_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_barbershopaddress_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_barbershopaddress_tv" />
+
+    <EditText
+        android:id="@+id/signupasbarber_password_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_password_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_password_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_password_tv" />
+
+    <Button
+        android:id="@+id/signupasbarber_signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Sign Up"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signupasbarber_openingdays_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Opening Days"
+        app:icon="@android:drawable/ic_menu_today"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_password_tv" />
+
+    <Button
+        android:id="@+id/signupasbarber_openinghours_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Opening Hours"
+        app:icon="@android:drawable/ic_lock_idle_alarm"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_openingdays_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_password_tv" />
+
+    <TextView
+        android:id="@+id/signupasbarber_haircutprice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Haircut price :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_openingdays_btn"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_openingdays_btn" />
+
+    <EditText
+        android:id="@+id/signupasbarber_haircutprice_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="price"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_haircutprice_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_haircutprice_tv"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_haircutprice_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
