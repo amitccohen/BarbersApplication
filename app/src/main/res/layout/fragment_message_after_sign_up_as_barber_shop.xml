@@ -14,33 +14,38 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="Success!"
+        android:textColor="@color/blue"
         android:textSize="60sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/messageAfterSignAsBarber_thanksmessage_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:text="Thanks,your Barber details have recived and now our team will check and confirm those details. once we done and find out that everything is allright you will get a message that you can start use the app.  Thanks!"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messageAfterSignAsBarber_success_tv" />
-
-    <Button
-        android:id="@+id/messageAfterSignAsBarber_ok_bt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Thanks,your Barber details have recived and now our team will check and confirm those details. once we done and find out that everything is allright you will get a message that you can start use the app.  Thanks!"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/messageAfterSignAsBarber_ok_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageAfterSignAsBarber_success_tv"
+        app:layout_constraintVertical_bias="0.304" />
+
+    <Button
+        android:id="@+id/messageAfterSignAsBarber_ok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:text="@android:string/ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messageAfterSignAsBarber_thanksmessage_tv" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,19 +11,20 @@
         android:layout_width="136dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:text="User Name"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/loginpage_username_etv"
+        android:id="@+id/loginpage_username_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="User Name"
         android:inputType="textPersonName"
@@ -33,12 +34,12 @@
         app:layout_constraintTop_toBottomOf="@+id/loginpage_username_tv" />
 
     <EditText
-        android:id="@+id/loginpage_password_etv"
+        android:id="@+id/loginpage_password_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -55,45 +56,74 @@
         android:layout_marginTop="8dp"
         android:text="Password"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/loginpage_username_tv"
-        app:layout_constraintTop_toBottomOf="@+id/loginpage_username_etv" />
+        app:layout_constraintTop_toBottomOf="@+id/loginpage_username_et" />
 
     <Button
-        android:id="@+id/loginpage_login_bt"
+        android:id="@+id/loginpage_login_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="8dp"
         android:text="Login"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginpage_password_etv" />
+        app:layout_constraintTop_toBottomOf="@+id/loginpage_password_et"
+        app:rippleColor="@color/purple_700" />
 
     <TextView
         android:id="@+id/loginpage_signupasclient_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="8dp"
         android:text="Sign up as Client"
+        android:textColor="@color/purple_700"
         android:textSize="24sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginpage_login_bt" />
+        app:layout_constraintTop_toBottomOf="@+id/loginpage_login_btn" />
 
     <TextView
         android:id="@+id/loginpagr_signupasbarber_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="Sign up as BarberShop"
+        android:textColor="@color/purple_700"
         android:textSize="24sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginpage_signupasclient_tv" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Barbers"
+        android:textColor="@color/blue"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="77dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,12 +12,15 @@
         tools:layout="@layout/fragment_log_in_page" />
 
     <fragment
-        android:id="@+id/fragment_sign_up_as_barber"
-        android:name="com.example.barbersapplication.SignUpAsBarberPage"
-        android:label="fragment_sign_up_as_barber"
-        tools:layout="@layout/fragment_sign_up_as_barber_page"
-        />
-
+        android:id="@+id/messageAfterSignUpAsBarberShop"
+        android:name="com.example.barbersapplication.MessageAfterSignUpAsBarberShop"
+        android:label="fragment_message_after_sign_up_as_barber_shop"
+        tools:layout="@layout/fragment_message_after_sign_up_as_barber_shop" />
+    <fragment
+        android:id="@+id/signUpAsClientPage"
+        android:name="com.example.barbersapplication.SignUpAsClientPage"
+        android:label="fragment_sign_up_as_client_page"
+        tools:layout="@layout/fragment_sign_up_as_client_page" />
     <fragment
         android:id="@+id/signUpAsBarberPage"
         android:name="com.example.barbersapplication.SignUpAsBarberPage"
