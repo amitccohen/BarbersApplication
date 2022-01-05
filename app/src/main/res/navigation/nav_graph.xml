@@ -26,4 +26,29 @@
         android:name="com.example.barbersapplication.SignUpAsBarberPage"
         android:label="fragment_sign_up_as_barber_page"
         tools:layout="@layout/fragment_sign_up_as_barber_page" />
+    <fragment
+        android:id="@+id/barberHomePage"
+        android:name="com.example.barbersapplication.BarberHomePage"
+        android:label="fragment_barber_home_page"
+        tools:layout="@layout/fragment_barber_home_page" />
+    <fragment
+        android:id="@+id/addPicturesOfBarberWorks"
+        android:name="com.example.barbersapplication.AddPicturesOfBarberWorks"
+        android:label="fragment_add_pictures_of_barber_works"
+        tools:layout="@layout/fragment_add_pictures_of_barber_works" />
+    <fragment
+        android:id="@+id/editBarber"
+        android:name="com.example.barbersapplication.EditBarber"
+        android:label="fragment_edit_barber"
+        tools:layout="@layout/fragment_edit_barber" />
+    <fragment
+        android:id="@+id/calendarToAddBarbersToWork"
+        android:name="com.example.barbersapplication.CalendarToAddBarbersToWork"
+        android:label="fragment_calendar_to_add_barbers_to_work"
+        tools:layout="@layout/fragment_calendar_to_add_barbers_to_work" />
+    <fragment
+        android:id="@+id/barbersListChooseForWork"
+        android:name="com.example.barbersapplication.BarbersListChooseForWork"
+        android:label="fragment_barbers_list_choose_for_work"
+        tools:layout="@layout/fragment_barbers_list_choose_for_work" />
 </navigation>

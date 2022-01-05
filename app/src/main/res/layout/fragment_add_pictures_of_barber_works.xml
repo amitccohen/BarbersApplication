@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPicturesOfBarberWorks" >
+
+    <TextView
+        android:id="@+id/addpicturesofbaberworks_description_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Description :"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addpicturesofbaberworks_description_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Add the description of your works here"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addpicturesofbaberworks_description_tv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addpicturesofbaberworks_pictureslist_rv"
+        android:layout_width="239dp"
+        android:layout_height="338dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/addpicturesofbaberworks_description_et"
+        app:layout_constraintStart_toStartOf="@+id/addpicturesofbaberworks_description_et"
+        app:layout_constraintTop_toBottomOf="@+id/addpicturesofbaberworks_description_et" />
+
+    <Button
+        android:id="@+id/addpicturesofbaberworks_addpictures_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Add pictures"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addpicturesofbaberworks_pictureslist_rv" />
+
+    <Button
+        android:id="@+id/addpicturesofbaberworks_save_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Save"
+        app:icon="@android:drawable/ic_menu_save"
+        app:layout_constraintBottom_toBottomOf="@+id/addpicturesofbaberworks_addpictures_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addpicturesofbaberworks_addpictures_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
