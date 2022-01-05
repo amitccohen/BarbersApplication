@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/logInPage">
+    app:startDestination="@id/messageAfterBookingMettingPage">
 
     <fragment
         android:id="@+id/logInPage"
@@ -51,4 +51,24 @@
         android:name="com.example.barbersapplication.BarbersListChooseForWork"
         android:label="fragment_barbers_list_choose_for_work"
         tools:layout="@layout/fragment_barbers_list_choose_for_work" />
+    <fragment
+        android:id="@+id/addBarber"
+        android:name="com.example.barbersapplication.AddBarber"
+        android:label="fragment_add_barber"
+        tools:layout="@layout/fragment_add_barber" />
+    <fragment
+        android:id="@+id/choosenBarberPage"
+        android:name="com.example.barbersapplication.choosenBarberPage"
+        android:label="fragment_choosen_barber_page"
+        tools:layout="@layout/fragment_choosen_barber_page" />
+    <fragment
+        android:id="@+id/editMeetingPage"
+        android:name="com.example.barbersapplication.EditMeetingPage"
+        android:label="fragment_edit_meeting_page"
+        tools:layout="@layout/fragment_edit_meeting_page" />
+    <fragment
+        android:id="@+id/messageAfterBookingMettingPage"
+        android:name="com.example.barbersapplication.messageAfterBookingMettingPage"
+        android:label="fragment_message_after_booking_metting_page"
+        tools:layout="@layout/fragment_message_after_booking_metting_page" />
 </navigation>
