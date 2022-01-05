@@ -4,29 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditMeetingPage" >
+    tools:context=".ChosenBarberPage">
 
-    <TextView
-        android:id="@+id/editmettingpage_info_tv"
+    <Button
+        android:id="@+id/choosenbarberpage_seepostsofbarber_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="you have a metting at 01.01.2022"
+        android:text="See Barber posts"
         android:textSize="24sp"
-        android:textStyle="bold"
+        app:icon="?attr/actionModeCutDrawable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/editmettingpage_deletemetting_btn"
+        android:id="@+id/choosenbarberpage_schedulemetting_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Delete Metting"
-        android:textSize="20sp"
-        app:icon="@android:drawable/ic_menu_delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="32dp"
+        android:text="Schedule a metting"
+        android:textSize="24sp"
+        app:icon="@android:drawable/ic_menu_today"
+        app:layout_constraintEnd_toEndOf="@+id/choosenbarberpage_seepostsofbarber_btn"
+        app:layout_constraintStart_toStartOf="@+id/choosenbarberpage_seepostsofbarber_btn"
+        app:layout_constraintTop_toBottomOf="@+id/choosenbarberpage_seepostsofbarber_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

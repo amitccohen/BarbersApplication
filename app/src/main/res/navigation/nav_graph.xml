@@ -58,9 +58,9 @@
         tools:layout="@layout/fragment_add_barber" />
     <fragment
         android:id="@+id/choosenBarberPage"
-        android:name="com.example.barbersapplication.choosenBarberPage"
+        android:name="com.example.barbersapplication.ChosenBarberPage"
         android:label="fragment_choosen_barber_page"
-        tools:layout="@layout/fragment_choosen_barber_page" />
+        tools:layout="@layout/fragment_chosen_barber_page" />
     <fragment
         android:id="@+id/editMeetingPage"
         android:name="com.example.barbersapplication.EditMeetingPage"
@@ -68,7 +68,7 @@
         tools:layout="@layout/fragment_edit_meeting_page" />
     <fragment
         android:id="@+id/messageAfterBookingMettingPage"
-        android:name="com.example.barbersapplication.messageAfterBookingMettingPage"
+        android:name="com.example.barbersapplication.MessageAfterBookingMeetingPage"
         android:label="fragment_message_after_booking_metting_page"
-        tools:layout="@layout/fragment_message_after_booking_metting_page" />
+        tools:layout="@layout/fragment_message_after_booking_meeting_page" />
 </navigation>

@@ -4,28 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditMeetingPage" >
+    tools:context=".MessageAfterBookingMeetingPage">
 
     <TextView
-        android:id="@+id/editmettingpage_info_tv"
+        android:id="@+id/messageafterbookingmettingpage_success_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="you have a metting at 01.01.2022"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:text="Success!"
+        android:textColor="@color/blue"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/messageafterbookingmettingpage_thanksmessage_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Thanks,you have a metting at 01.01.2022 .have a great day :-)"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageafterbookingmettingpage_success_tv" />
+
     <Button
-        android:id="@+id/editmettingpage_deletemetting_btn"
+        android:id="@+id/messageafterbookingmettingpage_returnhomepage_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="Delete Metting"
+        android:text="Return Home Page"
         android:textSize="20sp"
-        app:icon="@android:drawable/ic_menu_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
