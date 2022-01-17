@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/seeBarberOnMap">
+    app:startDestination="@id/logInPage">
 
     <fragment
         android:id="@+id/logInPage"
@@ -72,8 +72,33 @@
         android:label="fragment_message_after_booking_metting_page"
         tools:layout="@layout/fragment_message_after_booking_meeting_page" />
     <fragment
-        android:id="@+id/seeBarberOnMap"
-        android:name="com.example.barbersapplication.SeeBarberOnMap"
-        android:label="fragment_see_barber_on_map"
-        tools:layout="@layout/fragment_see_barber_on_map" />
+        android:id="@+id/seeBarberPostAsClientPage"
+        android:name="com.example.barbersapplication.SeeBarberPostAsClientPage"
+        android:label="fragment_see_barber_post_as_client_page"
+        tools:layout="@layout/fragment_see_barber_post_as_client_page" />
+    <fragment
+        android:id="@+id/clientHomePage"
+        android:name="com.example.barbersapplication.ClientHomePage"
+        android:label="fragment_client_home_page"
+        tools:layout="@layout/fragment_client_home_page" />
+    <fragment
+        android:id="@+id/barbersListAtBarber"
+        android:name="com.example.barbersapplication.BarbersListAtBarber"
+        android:label="fragment_barbers_list_at_barber"
+        tools:layout="@layout/fragment_barbers_list_at_barber" />
+    <fragment
+        android:id="@+id/bookMeetingPage"
+        android:name="com.example.barbersapplication.BookMeetingPage"
+        android:label="fragment_book_meeting_page"
+        tools:layout="@layout/fragment_book_meeting_page" />
+    <fragment
+        android:id="@+id/avaliableMeetingsList"
+        android:name="com.example.barbersapplication.AvaliableMeetingsList"
+        android:label="fragment_avaliable_meetings_list"
+        tools:layout="@layout/fragment_avaliable_meetings_list" />
+    <fragment
+        android:id="@+id/myMeetingsPage"
+        android:name="com.example.barbersapplication.MyMeetingsPage"
+        android:label="fragment_my_meetings_page"
+        tools:layout="@layout/fragment_my_meetings_page" />
 </navigation>

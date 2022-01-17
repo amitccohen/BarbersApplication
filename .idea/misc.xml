@@ -6,9 +6,12 @@
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/activity_main.xml" value="0.2821557971014493" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_add_barber.xml" value="0.2558876811594203" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_add_pictures_of_barber_works.xml" value="0.2694746376811594" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_avaliable_meetings_list.xml" value="0.3541666666666667" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barber_home_page.xml" value="0.2758152173913043" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barbers_list_at_barber.xml" value="0.3541666666666667" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barbers_list_choose_for_work.xml" value="0.2694746376811594" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barbers_map.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_book_meeting_page.xml" value="0.3541666666666667" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_calendar_to_add_barbers_to_work.xml" value="0.2694746376811594" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_chosen_barber_page.xml" value="0.2558876811594203" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_client_home_page.xml" value="0.21965579710144928" />
@@ -17,6 +20,8 @@
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_log_in_page.xml" value="0.2821557971014493" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_message_after_booking_meeting_page.xml" value="0.2558876811594203" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_message_after_sign_up_as_barber_shop.xml" value="0.2821557971014493" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_my_meetings_page.xml" value="0.3541666666666667" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_see_barber_on_map.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_see_barber_post_as_client_page.xml" value="0.21965579710144928" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_sign_up_as_barber_page.xml" value="0.2821557971014493" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_sign_up_as_client_page.xml" value="0.2821557971014493" />
