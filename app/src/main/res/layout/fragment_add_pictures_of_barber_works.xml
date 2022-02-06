@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="Description :"
+        android:text="@string/Description"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,22 +44,26 @@
         app:layout_constraintStart_toStartOf="@+id/addpicturesofbaberworks_description_et"
         app:layout_constraintTop_toBottomOf="@+id/addpicturesofbaberworks_description_et" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addpicturesofbaberworks_addpictures_btn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:background="@drawable/shape_selector"
         android:text="Add pictures"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addpicturesofbaberworks_pictureslist_rv" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addpicturesofbaberworks_save_btn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/shape_selector"
         android:text="Save"
+        android:textColor="@color/white"
         app:icon="@android:drawable/ic_menu_save"
         app:layout_constraintBottom_toBottomOf="@+id/addpicturesofbaberworks_addpictures_btn"
         app:layout_constraintEnd_toEndOf="parent"

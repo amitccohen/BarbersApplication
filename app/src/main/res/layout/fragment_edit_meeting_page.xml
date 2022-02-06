@@ -7,24 +7,27 @@
     tools:context=".EditMeetingPage" >
 
     <TextView
-        android:id="@+id/editmettingpage_info_tv"
+        android:id="@+id/editmeetingpage_info_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="you have a metting at 01.01.2022"
+        android:text="you have a meeting at 01.01.2022"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/editmettingpage_deletemetting_btn"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editmeetingpage_deletemeeting_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="Delete Metting"
-        android:textSize="20sp"
+        android:background="@drawable/shape_selector"
+        android:padding="15dp"
+        android:text="Delete Meeting"
+        android:textColor="@color/white"
         app:icon="@android:drawable/ic_menu_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

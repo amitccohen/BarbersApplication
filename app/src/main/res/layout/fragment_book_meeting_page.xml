@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="Calendar :"
+        android:text="@string/Calendar"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +29,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bookmeetingpage_calendar_tv" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bookmeetingpage_pickdate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_selector"
         android:text="Pick selected date"
+        android:textColor="@color/white"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

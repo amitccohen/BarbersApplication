@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="Success!"
-        android:textColor="@color/blue"
+        android:textColor="@color/appblue"
         android:textSize="60sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,6 +29,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Thanks,your Barber details have recived and now our team will check and confirm those details. once we done and find out that everything is allright you will get a message that you can start use the app.  Thanks!"
+        android:textColor="@color/blue"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/messageAfterSignAsBarber_ok_btn"
@@ -38,14 +39,17 @@
         app:layout_constraintTop_toBottomOf="@+id/messageAfterSignAsBarber_success_tv"
         app:layout_constraintVertical_bias="0.304" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/messageAfterSignAsBarber_ok_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_selector"
         android:text="@android:string/ok"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

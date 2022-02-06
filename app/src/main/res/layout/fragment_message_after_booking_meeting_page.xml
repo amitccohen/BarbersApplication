@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Success!"
-        android:textColor="@color/blue"
+        android:textColor="@color/appblue"
         android:textSize="60sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,19 +27,22 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:text="Thanks,you have a metting at 01.01.2022 .have a great day :-)"
+        android:textColor="@color/blue"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messageafterbookingmettingpage_success_tv" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/messageafterbookingmettingpage_returnhomepage_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_selector"
         android:text="Return Home Page"
-        android:textSize="20sp"
+        android:padding="15dp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

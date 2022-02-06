@@ -2,4 +2,15 @@
     <string name="app_name">Barbers Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Barbers"><u>Barbers:</u></string>
+    <string name="Barber_shop_list"><u>Barbershops List:</u></string>
+    <string name="list_of_meetings"><u>List of my meetings:</u></string>
+    <string name="Description"><u>Description:</u></string>
+    <string name="List_of_available_meetings"><u>List of available meetings:</u></string>
+    <string name="Barbers_list"><u>Barbers list:</u></string>
+    <string name="Barbers_posts"><u>Posts:</u></string>
+    <string name="Comments"><u>Comments:</u></string>
+    <string name="Edit_works"><u>Edit works:</u></string>
+    <string name="Calendar"><u>Calendar:</u></string>
 </resources>

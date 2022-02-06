@@ -13,6 +13,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="Name :"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +25,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:text="Add pictures of Barber works"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/addbarber_name_tv"
@@ -43,24 +45,28 @@
         app:layout_constraintStart_toEndOf="@+id/addbarber_name_tv"
         app:layout_constraintTop_toTopOf="@+id/addbarber_name_tv" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addbarber_addpictures_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_selector"
         android:text="Add"
+        android:textColor="@color/white"
         app:icon="@android:drawable/ic_menu_add"
         app:layout_constraintBottom_toBottomOf="@+id/addbarber_texttoaddphotos_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addbarber_texttoaddphotos_tv"
         app:layout_constraintTop_toTopOf="@+id/addbarber_texttoaddphotos_tv" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addbarber_save_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_selector"
         android:text="Save"
+        android:textColor="@color/white"
         app:icon="@android:drawable/ic_menu_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

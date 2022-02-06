@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Choose date to add barbers to work"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,11 +29,13 @@
         app:layout_constraintStart_toStartOf="@+id/calendartoaddbarberstowork_message_tv"
         app:layout_constraintTop_toBottomOf="@+id/calendartoaddbarberstowork_message_tv" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/calendartoaddbarberstowork_next_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_selector"
         android:text="Next"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

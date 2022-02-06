@@ -6,25 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".ChosenBarberPage">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/choosenbarberpage_seepostsofbarber_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
+        android:padding="20dp"
+        android:background="@drawable/shape_selector"
         android:text="See Barber posts"
-        android:textSize="20sp"
+        android:textColor="@color/white"
         app:icon="?attr/actionModeCutDrawable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/choosenbarberpage_schedulemetting_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/shape_selector"
         android:text="Schedule a metting"
-        android:textSize="20sp"
+        android:padding="20dp"
+        android:textColor="@color/white"
         app:icon="@android:drawable/ic_menu_today"
         app:layout_constraintEnd_toEndOf="@+id/choosenbarberpage_seepostsofbarber_btn"
         app:layout_constraintStart_toStartOf="@+id/choosenbarberpage_seepostsofbarber_btn"

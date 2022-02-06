@@ -11,7 +11,8 @@
         android:layout_width="136dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:text="User Name"
+        android:text="Username:"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="User Name"
         android:inputType="textPersonName"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,6 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Password"
         android:inputType="textPassword"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,25 +52,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Password"
+        android:text="Password:"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/loginpage_username_tv"
         app:layout_constraintTop_toBottomOf="@+id/loginpage_username_et" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginpage_login_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_selector"
         android:text="Login"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginpage_password_et"
         app:rippleColor="@color/purple_700" />
+
 
     <TextView
         android:id="@+id/loginpage_signupasclient_tv"
@@ -83,9 +86,9 @@
         android:clickable="true"
         android:minHeight="48dp"
         android:text="Sign up as Client"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginpage_login_btn" />
@@ -100,9 +103,9 @@
         android:clickable="true"
         android:minHeight="48dp"
         android:text="Sign up as BarberShop"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/appblue"
         android:textSize="24sp"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginpage_signupasclient_tv" />
