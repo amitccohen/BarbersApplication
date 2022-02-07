@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpAsBarberPage" >
+    tools:context=".fragments.SignUpAsBarberPage" >
 
     <TextView
         android:id="@+id/signupasbarber_username_tv"
@@ -199,32 +199,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/signupasbarber_openingdays_btn"
+        android:id="@+id/signupasbarber_addlogo_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/shape_selector"
-        android:padding="7dp"
-        android:text="Opening Days"
+        android:padding="10dp"
+        android:text="Add Barbershop Logo"
         android:textColor="@color/white"
         app:icon="@android:drawable/ic_menu_today"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_password_tv" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/signupasbarber_openinghours_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/shape_selector"
-        android:padding="7dp"
-        android:text="Opening Hours"
-        android:textColor="@color/white"
-        app:icon="@android:drawable/ic_lock_idle_alarm"
-        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_openingdays_btn"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupasbarber_password_tv" />
 
     <TextView
@@ -236,8 +221,8 @@
         android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/signupasbarber_openingdays_btn"
-        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_openingdays_btn" />
+        app:layout_constraintStart_toStartOf="@+id/signupasbarber_password_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signupasbarber_addlogo_btn" />
 
     <EditText
         android:id="@+id/signupasbarber_haircutprice_et"
@@ -251,5 +236,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/signupasbarber_haircutprice_tv"
         app:layout_constraintTop_toTopOf="@+id/signupasbarber_haircutprice_tv" />
+
+    <ImageView
+        android:id="@+id/signupasbarber_logo_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/signupasbarber_addlogo_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signupasbarber_addlogo_btn"
+        app:layout_constraintTop_toTopOf="@+id/signupasbarber_addlogo_btn"
+        tools:src="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

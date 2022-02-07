@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SeeBarberPostAsClientPage" >
+    tools:context=".fragments.SeeBarberPostAsClientPage" >
 
     <TextView
         android:id="@+id/seebarberpostasclient_barberpostheadline_tv"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MessageAfterSignUpAsBarberShop">
+    tools:context=".fragments.MessageAfterSignUpAsBarberShop">
 
     <TextView
         android:id="@+id/messageAfterSignAsBarber_success_tv"

@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout13"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyMeetingsPage" >
+    tools:context=".fragments.MyMeetingsPage" >
 
     <TextView
         android:id="@+id/mymeetingspage_listofmymeetings_tv"

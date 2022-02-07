@@ -1,4 +1,4 @@
-package com.example.barbersapplication;
+package com.example.barbersapplication.fragments;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.barbersapplication.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SeeBarberPostAsClientPage#newInstance} factory method to
+ * Use the {@link AvaliableMeetingsList#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SeeBarberPostAsClientPage extends Fragment {
+public class AvaliableMeetingsList extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class SeeBarberPostAsClientPage extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SeeBarberPostAsClientPage() {
+    public AvaliableMeetingsList() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class SeeBarberPostAsClientPage extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SeeBarberPostAsClientPage.
+     * @return A new instance of fragment AvaliableMeetingsList.
      */
     // TODO: Rename and change types and number of parameters
-    public static SeeBarberPostAsClientPage newInstance(String param1, String param2) {
-        SeeBarberPostAsClientPage fragment = new SeeBarberPostAsClientPage();
+    public static AvaliableMeetingsList newInstance(String param1, String param2) {
+        AvaliableMeetingsList fragment = new AvaliableMeetingsList();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class SeeBarberPostAsClientPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_see_barber_post_as_client_page, container, false);
+        return inflater.inflate(R.layout.fragment_avaliable_meetings_list, container, false);
     }
 }

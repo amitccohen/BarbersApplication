@@ -1,4 +1,4 @@
-package com.example.barbersapplication;
+package com.example.barbersapplication.fragments;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.barbersapplication.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BookMeetingPage#newInstance} factory method to
+ * Use the {@link EditMeetingPage#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BookMeetingPage extends Fragment {
+public class EditMeetingPage extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class BookMeetingPage extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BookMeetingPage() {
+    public EditMeetingPage() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class BookMeetingPage extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BookMeetingPage.
+     * @return A new instance of fragment EditMeetingPage.
      */
     // TODO: Rename and change types and number of parameters
-    public static BookMeetingPage newInstance(String param1, String param2) {
-        BookMeetingPage fragment = new BookMeetingPage();
+    public static EditMeetingPage newInstance(String param1, String param2) {
+        EditMeetingPage fragment = new EditMeetingPage();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class BookMeetingPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book_meeting_page, container, false);
+        return inflater.inflate(R.layout.fragment_edit_meeting_page, container, false);
     }
 }

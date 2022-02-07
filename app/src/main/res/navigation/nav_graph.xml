@@ -7,98 +7,121 @@
 
     <fragment
         android:id="@+id/logInPage"
-        android:name="com.example.barbersapplication.LogInPage"
+        android:name="com.example.barbersapplication.fragments.LogInPage"
         android:label="fragment_log_in_page"
-        tools:layout="@layout/fragment_log_in_page" />
+        tools:layout="@layout/fragment_log_in_page" >
+        <action
+            android:id="@+id/action_logInPage_to_signUpAsClientPage"
+            app:destination="@id/signUpAsClientPage"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_logInPage_to_signUpAsBarberPage"
+            app:destination="@id/signUpAsBarberPage"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
 
     <fragment
         android:id="@+id/messageAfterSignUpAsBarberShop"
-        android:name="com.example.barbersapplication.MessageAfterSignUpAsBarberShop"
+        android:name="com.example.barbersapplication.fragments.MessageAfterSignUpAsBarberShop"
         android:label="fragment_message_after_sign_up_as_barber_shop"
         tools:layout="@layout/fragment_message_after_sign_up_as_barber_shop" />
     <fragment
         android:id="@+id/signUpAsClientPage"
-        android:name="com.example.barbersapplication.SignUpAsClientPage"
+        android:name="com.example.barbersapplication.fragments.SignUpAsClientPage"
         android:label="fragment_sign_up_as_client_page"
-        tools:layout="@layout/fragment_sign_up_as_client_page" />
+        tools:layout="@layout/fragment_sign_up_as_client_page" >
+        <action
+            android:id="@+id/action_signUpAsClientPage_to_logInPage"
+            app:destination="@id/logInPage"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/logInPage"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/signUpAsBarberPage"
-        android:name="com.example.barbersapplication.SignUpAsBarberPage"
+        android:name="com.example.barbersapplication.fragments.SignUpAsBarberPage"
         android:label="fragment_sign_up_as_barber_page"
-        tools:layout="@layout/fragment_sign_up_as_barber_page" />
+        tools:layout="@layout/fragment_sign_up_as_barber_page" >
+        <action
+            android:id="@+id/action_signUpAsBarberPage_to_logInPage"
+            app:destination="@id/logInPage"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/logInPage"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/barberHomePage"
-        android:name="com.example.barbersapplication.BarberHomePage"
+        android:name="com.example.barbersapplication.fragments.BarberHomePage"
         android:label="fragment_barber_home_page"
         tools:layout="@layout/fragment_barber_home_page" />
     <fragment
         android:id="@+id/addPicturesOfBarberWorks"
-        android:name="com.example.barbersapplication.AddPicturesOfBarberWorks"
+        android:name="com.example.barbersapplication.fragments.AddPicturesOfBarberWorks"
         android:label="fragment_add_pictures_of_barber_works"
         tools:layout="@layout/fragment_add_pictures_of_barber_works" />
     <fragment
         android:id="@+id/editBarber"
-        android:name="com.example.barbersapplication.EditBarber"
+        android:name="com.example.barbersapplication.fragments.EditBarber"
         android:label="fragment_edit_barber"
         tools:layout="@layout/fragment_edit_barber" />
     <fragment
         android:id="@+id/calendarToAddBarbersToWork"
-        android:name="com.example.barbersapplication.CalendarToAddBarbersToWork"
+        android:name="com.example.barbersapplication.fragments.CalendarToAddBarbersToWork"
         android:label="fragment_calendar_to_add_barbers_to_work"
         tools:layout="@layout/fragment_calendar_to_add_barbers_to_work" />
     <fragment
         android:id="@+id/barbersListChooseForWork"
-        android:name="com.example.barbersapplication.BarbersListChooseForWork"
+        android:name="com.example.barbersapplication.fragments.BarbersListChooseForWork"
         android:label="fragment_barbers_list_choose_for_work"
         tools:layout="@layout/fragment_barbers_list_choose_for_work" />
     <fragment
         android:id="@+id/addBarber"
-        android:name="com.example.barbersapplication.AddBarber"
+        android:name="com.example.barbersapplication.fragments.AddBarber"
         android:label="fragment_add_barber"
         tools:layout="@layout/fragment_add_barber" />
     <fragment
         android:id="@+id/choosenBarberPage"
-        android:name="com.example.barbersapplication.ChosenBarberPage"
+        android:name="com.example.barbersapplication.fragments.ChosenBarberPage"
         android:label="fragment_choosen_barber_page"
         tools:layout="@layout/fragment_chosen_barber_page" />
     <fragment
         android:id="@+id/editMeetingPage"
-        android:name="com.example.barbersapplication.EditMeetingPage"
+        android:name="com.example.barbersapplication.fragments.EditMeetingPage"
         android:label="fragment_edit_meeting_page"
         tools:layout="@layout/fragment_edit_meeting_page" />
     <fragment
         android:id="@+id/messageAfterBookingMettingPage"
-        android:name="com.example.barbersapplication.MessageAfterBookingMeetingPage"
+        android:name="com.example.barbersapplication.fragments.MessageAfterBookingMeetingPage"
         android:label="fragment_message_after_booking_metting_page"
         tools:layout="@layout/fragment_message_after_booking_meeting_page" />
     <fragment
         android:id="@+id/seeBarberPostAsClientPage"
-        android:name="com.example.barbersapplication.SeeBarberPostAsClientPage"
+        android:name="com.example.barbersapplication.fragments.SeeBarberPostAsClientPage"
         android:label="fragment_see_barber_post_as_client_page"
         tools:layout="@layout/fragment_see_barber_post_as_client_page" />
     <fragment
         android:id="@+id/clientHomePage"
-        android:name="com.example.barbersapplication.ClientHomePage"
+        android:name="com.example.barbersapplication.fragments.ClientHomePage"
         android:label="fragment_client_home_page"
         tools:layout="@layout/fragment_client_home_page" />
     <fragment
         android:id="@+id/barbersListAtBarber"
-        android:name="com.example.barbersapplication.BarbersListAtBarber"
+        android:name="com.example.barbersapplication.fragments.BarbersListAtBarber"
         android:label="fragment_barbers_list_at_barber"
         tools:layout="@layout/fragment_barbers_list_at_barber" />
     <fragment
         android:id="@+id/bookMeetingPage"
-        android:name="com.example.barbersapplication.BookMeetingPage"
+        android:name="com.example.barbersapplication.fragments.BookMeetingPage"
         android:label="fragment_book_meeting_page"
         tools:layout="@layout/fragment_book_meeting_page" />
     <fragment
         android:id="@+id/avaliableMeetingsList"
-        android:name="com.example.barbersapplication.AvaliableMeetingsList"
+        android:name="com.example.barbersapplication.fragments.AvaliableMeetingsList"
         android:label="fragment_avaliable_meetings_list"
         tools:layout="@layout/fragment_avaliable_meetings_list" />
     <fragment
         android:id="@+id/myMeetingsPage"
-        android:name="com.example.barbersapplication.MyMeetingsPage"
+        android:name="com.example.barbersapplication.fragments.MyMeetingsPage"
         android:label="fragment_my_meetings_page"
         tools:layout="@layout/fragment_my_meetings_page" />
 </navigation>
