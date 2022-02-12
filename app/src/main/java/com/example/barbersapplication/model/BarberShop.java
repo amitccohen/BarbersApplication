@@ -25,6 +25,19 @@ public class BarberShop {
         this.logo = logo;
     }
 
+    public BarberShop(String userName, String ownerName, String barberName, String barberEmail, String barberPhone, String barberAddress, String password, String haircutPrice) {
+        this.userName = userName;
+        this.ownerName = ownerName;
+        this.barberName = barberName;
+        this.barberEmail = barberEmail;
+        this.barberPhone = barberPhone;
+        this.barberAddress = barberAddress;
+        this.password = password;
+        this.haircutPrice = haircutPrice;
+
+    }
+
+
     public String getUserName() {
         return userName;
     }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/logInPage">
+    app:startDestination="@id/clientHomePage">
 
     <fragment
         android:id="@+id/logInPage"
@@ -83,17 +83,36 @@
         android:id="@+id/choosenBarberPage"
         android:name="com.example.barbersapplication.fragments.ChosenBarberPage"
         android:label="fragment_choosen_barber_page"
-        tools:layout="@layout/fragment_chosen_barber_page" />
+        tools:layout="@layout/fragment_chosen_barber_page" >
+        <action
+            android:id="@+id/action_choosenBarberPage_to_bookMeetingPage"
+            app:destination="@id/bookMeetingPage" />
+        <action
+            android:id="@+id/action_choosenBarberPage_to_seeBarberPostAsClientPage"
+            app:destination="@id/seeBarberPostAsClientPage" />
+    </fragment>
     <fragment
         android:id="@+id/editMeetingPage"
         android:name="com.example.barbersapplication.fragments.EditMeetingPage"
         android:label="fragment_edit_meeting_page"
-        tools:layout="@layout/fragment_edit_meeting_page" />
+        tools:layout="@layout/fragment_edit_meeting_page" >
+        <action
+            android:id="@+id/action_editMeetingPage_to_clientHomePage"
+            app:destination="@id/clientHomePage"
+            app:popUpTo="@id/clientHomePage"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/messageAfterBookingMettingPage"
         android:name="com.example.barbersapplication.fragments.MessageAfterBookingMeetingPage"
         android:label="fragment_message_after_booking_metting_page"
-        tools:layout="@layout/fragment_message_after_booking_meeting_page" />
+        tools:layout="@layout/fragment_message_after_booking_meeting_page" >
+        <action
+            android:id="@+id/action_messageAfterBookingMettingPage_to_clientHomePage"
+            app:destination="@id/clientHomePage"
+            app:popUpTo="@id/clientHomePage"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/seeBarberPostAsClientPage"
         android:name="com.example.barbersapplication.fragments.SeeBarberPostAsClientPage"
@@ -101,27 +120,50 @@
         tools:layout="@layout/fragment_see_barber_post_as_client_page" />
     <fragment
         android:id="@+id/clientHomePage"
-        android:name="com.example.barbersapplication.fragments.ClientHomePage"
+        android:name="com.example.barbersapplication.fragments.clientHomePage.ClientHomePage"
         android:label="fragment_client_home_page"
-        tools:layout="@layout/fragment_client_home_page" />
+        tools:layout="@layout/fragment_client_home_page" >
+        <action
+            android:id="@+id/action_clientHomePage_to_myMeetingsPage"
+            app:destination="@id/myMeetingsPage" />
+        <action
+            android:id="@+id/action_clientHomePage_to_barbersListAtBarber"
+            app:destination="@id/barbersListAtBarber" />
+    </fragment>
     <fragment
         android:id="@+id/barbersListAtBarber"
         android:name="com.example.barbersapplication.fragments.BarbersListAtBarber"
         android:label="fragment_barbers_list_at_barber"
-        tools:layout="@layout/fragment_barbers_list_at_barber" />
+        tools:layout="@layout/fragment_barbers_list_at_barber" >
+        <action
+            android:id="@+id/action_barbersListAtBarber_to_choosenBarberPage"
+            app:destination="@id/choosenBarberPage" />
+    </fragment>
     <fragment
         android:id="@+id/bookMeetingPage"
         android:name="com.example.barbersapplication.fragments.BookMeetingPage"
         android:label="fragment_book_meeting_page"
-        tools:layout="@layout/fragment_book_meeting_page" />
+        tools:layout="@layout/fragment_book_meeting_page" >
+        <action
+            android:id="@+id/action_bookMeetingPage_to_avaliableMeetingsList"
+            app:destination="@id/avaliableMeetingsList" />
+    </fragment>
     <fragment
         android:id="@+id/avaliableMeetingsList"
         android:name="com.example.barbersapplication.fragments.AvaliableMeetingsList"
         android:label="fragment_avaliable_meetings_list"
-        tools:layout="@layout/fragment_avaliable_meetings_list" />
+        tools:layout="@layout/fragment_avaliable_meetings_list" >
+        <action
+            android:id="@+id/action_avaliableMeetingsList_to_messageAfterBookingMettingPage"
+            app:destination="@id/messageAfterBookingMettingPage" />
+    </fragment>
     <fragment
         android:id="@+id/myMeetingsPage"
         android:name="com.example.barbersapplication.fragments.MyMeetingsPage"
         android:label="fragment_my_meetings_page"
-        tools:layout="@layout/fragment_my_meetings_page" />
+        tools:layout="@layout/fragment_my_meetings_page" >
+        <action
+            android:id="@+id/action_myMeetingsPage_to_editMeetingPage"
+            app:destination="@id/editMeetingPage" />
+    </fragment>
 </navigation>
