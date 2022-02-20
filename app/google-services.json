@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "487090489002",
+    "project_id": "barbers-application",
+    "storage_bucket": "barbers-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487090489002:android:4b3ec3b42a292194adf2d3",
+        "android_client_info": {
+          "package_name": "com.example.barbersapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487090489002-4smfm04np5isfrkqsmpo2c1cqn59scu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApuL8pfbCyzzXeLxaO4e2Ir4zyO0el8KU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487090489002-4smfm04np5isfrkqsmpo2c1cqn59scu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

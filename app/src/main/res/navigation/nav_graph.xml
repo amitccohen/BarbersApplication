@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/clientHomePage">
+    app:startDestination="@id/logInPage">
 
     <fragment
         android:id="@+id/logInPage"
@@ -17,6 +17,14 @@
         <action
             android:id="@+id/action_logInPage_to_signUpAsBarberPage"
             app:destination="@id/signUpAsBarberPage"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_logInPage_to_barberHomePage"
+            app:destination="@id/barberHomePage"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_logInPage_to_clientHomePage"
+            app:destination="@id/clientHomePage"
             app:enterAnim="@android:anim/fade_in" />
     </fragment>
 
