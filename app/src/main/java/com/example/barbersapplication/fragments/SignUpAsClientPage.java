@@ -13,6 +13,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.barbersapplication.R;
+import com.example.barbersapplication.model.Client;
+import com.example.barbersapplication.model.Model;
+import com.example.barbersapplication.model.ModelFirebase;
+import com.google.android.material.snackbar.Snackbar;
 
 
 public class SignUpAsClientPage extends Fragment {
@@ -43,6 +47,7 @@ public class SignUpAsClientPage extends Fragment {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                signUpAsClient();
                 Navigation.findNavController(view).navigate(R.id.action_signUpAsClientPage_to_logInPage);
             }
         });
@@ -50,38 +55,55 @@ public class SignUpAsClientPage extends Fragment {
     }
 
     private void signUpAsClient() {
+        boolean flag = false;
         String username = usernameEt.getText().toString().trim();
         String email = emailEt.getText().toString().trim();
         String phone = phoneEt.getText().toString().trim();
         String password = passwordEt.getText().toString().trim();
 
+        if (!flag) {
+            flag = true;
+            if (username.isEmpty()){
+                usernameEt.setError("Please set your username");
+                usernameEt.requestFocus();
+                flag = false;
+                return;
+            }
+            if(email.isEmpty()) {
+                emailEt.setError("Please set your email");
+                emailEt.requestFocus();
+                flag = false;
+                return;
+            }
+            if (phone.isEmpty()){
+                phoneEt.setError("Please set your phone");
+                phoneEt.requestFocus();
+                flag = false;
+                return;
+            }
+            if(password.isEmpty()) {
+                passwordEt.setError("Please set your password");
+                passwordEt.requestFocus();
+                flag = false;
+                return;
+            }
+            if(password.length() < 6) {
+                passwordEt.setError("Password must contain at least 6 characters");
+                passwordEt.requestFocus();
+                flag = false;
+                return;
+            }
+        }
 
-        if (username.isEmpty()){
-            usernameEt.setError("Please set your username");
-            usernameEt.requestFocus();
-            return;
+        if (flag) {
+            Client client = new Client(username,email,phone,password);
+            Model.instance.signUpUserAsClient(client, new Model.SignUpUserListener() {
+                @Override
+                public void onComplete() {
+                    Snackbar.make(view,"Sign up succeed",Snackbar.LENGTH_SHORT).show();
+                }
+            });
         }
-        if(email.isEmpty()) {
-            emailEt.setError("Please set your email");
-            emailEt.requestFocus();
-            return;
-        }
-        if (phone.isEmpty()){
-            phoneEt.setError("Please set your phone");
-            phoneEt.requestFocus();
-            return;
-        }
-        if(password.isEmpty()) {
-            passwordEt.setError("Please set your password");
-            passwordEt.requestFocus();
-            return;
-        }
-        if(password.length() < 6) {
-            passwordEt.setError("Password must contain at least 6 characters");
-            passwordEt.requestFocus();
-            return;
-        }
-        //User
     }
 
 
