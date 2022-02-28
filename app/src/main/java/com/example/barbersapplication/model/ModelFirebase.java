@@ -28,52 +28,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ModelFirebase {
     private String userType = "no type";
-    private String userName="empty";
     public String getUserType() {return userType;}
 
-    public void signUpUserAsClient(Client client, Model.SignUpUserListener listener) {
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        mAuth.createUserWithEmailAndPassword(client.getEmail(), client.getPassword())
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("TAG", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            if (user != null) {
-                                String userId = user.getUid();
-                                Map<String, Object> DBUser = new HashMap<>();
-                                DBUser.put("usertype", "client");
-                                DBUser.put("username", client.getUserName());
-                                DBUser.put("email", client.getEmail());
-                                DBUser.put("phone", client.getPhone());
-                                DBUser.put("password", client.getPassword());
-                                db.collection("users").document(userId)
-                                        .set(DBUser)
-                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                            @Override
-                                            public void onSuccess(Void aVoid) {
-                                                Log.d("TAG", "DocumentSnapshot successfully written!");
-                                                listener.onComplete();
-                                            }
-                                        })
-                                        .addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception e) {
-                                                Log.w("TAG", "Error writing document", e);
-                                            }
-                                        });
-                            }
-                        } else {
-                            Log.d("TAG", "createUserWithEmail:failed");
-                        }
-                    }
-                });
-    }
-
-    //log in function
     public void logIn(String eMail, String password, View view, Model.LogInListener listener) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -124,6 +80,49 @@ public class ModelFirebase {
                     }
                 });
         listener.onComplete();
+    }
+
+
+    public void signUpUserAsClient(Client client, Model.SignUpUserListener listener) {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        mAuth.createUserWithEmailAndPassword(client.getEmail(), client.getPassword())
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("TAG", "createUserWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            if (user != null) {
+                                String userId = user.getUid();
+                                Map<String, Object> DBUser = new HashMap<>();
+                                DBUser.put("usertype", "client");
+                                DBUser.put("username", client.getUserName());
+                                DBUser.put("email", client.getEmail());
+                                DBUser.put("phone", client.getPhone());
+                                DBUser.put("password", client.getPassword());
+                                db.collection("users").document(userId)
+                                        .set(DBUser)
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                Log.d("TAG", "DocumentSnapshot successfully written!");
+                                                listener.onComplete();
+                                            }
+                                        })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Log.w("TAG", "Error writing document", e);
+                                            }
+                                        });
+                            }
+                        } else {
+                            Log.d("TAG", "createUserWithEmail:failed");
+                        }
+                    }
+                });
     }
 
     public void logOut() {
