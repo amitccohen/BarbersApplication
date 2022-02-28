@@ -1,5 +1,6 @@
 package com.example.barbersapplication.model;
 
+import android.net.Uri;
 import android.widget.ImageView;
 
 public class BarberShop {
@@ -11,9 +12,9 @@ public class BarberShop {
     String barberAddress;
     String password;
     String haircutPrice;
-    ImageView logo;
+    Uri logo;
 
-    public BarberShop(String userName, String ownerName, String barberName, String barberEmail, String barberPhone, String barberAddress, String password, String haircutPrice, ImageView logo) {
+    public BarberShop(String userName, String ownerName, String barberName, String barberEmail, String barberPhone, String barberAddress, String password, String haircutPrice, Uri logo) {
         this.userName = userName;
         this.ownerName = ownerName;
         this.barberName = barberName;
@@ -102,11 +103,11 @@ public class BarberShop {
         this.haircutPrice = haircutPrice;
     }
 
-    public ImageView getLogo() {
+    public Uri getLogo() {
         return logo;
     }
 
-    public void setLogo(ImageView logo) {
+    public void setLogo(Uri logo) {
         this.logo = logo;
     }
 }

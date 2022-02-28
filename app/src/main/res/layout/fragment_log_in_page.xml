@@ -11,7 +11,7 @@
         android:layout_width="136dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:text="Username:"
+        android:text="Email:"
         android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"

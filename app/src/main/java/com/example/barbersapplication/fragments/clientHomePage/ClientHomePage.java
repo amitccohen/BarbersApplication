@@ -13,9 +13,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.barbersapplication.R;
 import com.example.barbersapplication.model.BarberShop;
+import com.example.barbersapplication.model.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +38,10 @@ public class ClientHomePage extends Fragment {
         Button myMeetingBtn = view.findViewById(R.id.clienthomepage_mymeetings_btn);
         Button searchBtn = view.findViewById(R.id.clienthomepage_search_btn);
         RecyclerView barbershopList = view.findViewById(R.id.clienthomepage_barbershopslist_rv);
+        Button logOutBtn = view.findViewById(R.id.clienthomepage_logout_btn);
+        ProgressBar progressBar = view.findViewById(R.id.clienthomepage_progressbar_pg);
+
+        progressBar.setVisibility(View.GONE);
 
         myMeetingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +59,13 @@ public class ClientHomePage extends Fragment {
         });
 
 
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model.instance.logOut();
+                Navigation.findNavController(view).navigate(R.id.action_clientHomePage_to_logInPage);
+            }
+        });
 
         barbershopList.setHasFixedSize(true);
         barbershopList.setLayoutManager(new LinearLayoutManager(view.getContext()));
