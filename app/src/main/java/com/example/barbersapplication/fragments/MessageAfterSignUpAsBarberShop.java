@@ -24,7 +24,13 @@ public class MessageAfterSignUpAsBarberShop extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_message_after_sign_up_as_barber_shop, container, false);
+        Button okBtn= view.findViewById(R.id.messageAfterSignAsBarber_ok_btn);
+        okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
 
 
         return view;
