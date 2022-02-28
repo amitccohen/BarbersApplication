@@ -3,60 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_barber_home_page.xml" value="0.2296875" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_client_home_page.xml" value="0.2296875" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_log_in_page.xml" value="0.2296875" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_sign_up_as_client_page.xml" value="0.35144927536231885" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.304" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.304" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/drawable/shape_selector.xml" value="0.2025" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/activity_main.xml" value="0.2821557971014493" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/barbershop_cell_for_client_home_page.xml" value="0.5" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_add_barber.xml" value="0.2558876811594203" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_add_pictures_of_barber_works.xml" value="0.2694746376811594" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_avaliable_meetings_list.xml" value="0.3541666666666667" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barber_home_page.xml" value="0.2758152173913043" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barbers_list_at_barber.xml" value="0.3541666666666667" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barbers_list_choose_for_work.xml" value="0.2694746376811594" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_barbers_map.xml" value="0.24909420289855072" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_book_meeting_page.xml" value="0.3541666666666667" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_calendar_to_add_barbers_to_work.xml" value="0.2694746376811594" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_chosen_barber_page.xml" value="0.2558876811594203" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_client_home_page.xml" value="0.21965579710144928" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_edit_barber.xml" value="0.2694746376811594" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_edit_meeting_page.xml" value="0.2558876811594203" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_log_in_page.xml" value="0.2758152173913043" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_message_after_booking_meeting_page.xml" value="0.2558876811594203" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_log_in_page.xml" value="0.2821557971014493" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_message_after_sign_up_as_barber_shop.xml" value="0.2821557971014493" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_my_meetings_page.xml" value="0.3541666666666667" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_see_barber_on_map.xml" value="0.20729166666666668" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_see_barber_post_as_client_page.xml" value="0.21965579710144928" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_sign_up_as_barber_page.xml" value="0.2821557971014493" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_sign_up_as_client_page.xml" value="0.2821557971014493" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/layout/fragment_sing_up_client.xml" value="0.2821557971014493" />
-        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApplication/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.xml" value="0.304" />
-        <entry key="..\:/Users/michael harush/StudioProjects/BarbersApplication/app/src/main/res/layout/fragment_see_barber_on_map.xml" value="0.14666666666666667" />
-        <entry key="..\:/android/BarbersApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/android/BarbersApplication/app/src/main/res/layout/fragment_log_in_page.xml" value="0.20416666666666666" />
-        <entry key="..\:/android/BarbersApplication/app/src/main/res/layout/fragment_message_after_sign_up_as_barber_shop.xml" value="0.20416666666666666" />
-        <entry key="..\:/android/BarbersApplication/app/src/main/res/layout/fragment_sign_up_as_barber_page.xml" value="0.2" />
-        <entry key="..\:/android/BarbersApplication/app/src/main/res/layout/fragment_test_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/michael harush/StudioProjects/BarbersApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/michael harush/StudioProjects/BarbersApplication/app/src/main/res/layout/fragment_log_in_page.xml" value="0.1" />
+        <entry key="..\:/Users/user/StudioProjects/BarbersApplication/app/src/main/res/layout/fragment_log_in_page.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.2758152173913043" />
-      </ProjectState>
-    </option>
   </component>
 </project>

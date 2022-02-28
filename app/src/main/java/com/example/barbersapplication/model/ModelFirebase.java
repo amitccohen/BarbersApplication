@@ -28,6 +28,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ModelFirebase {
     private String userType = "no type";
+    private String userName="empty";
     public String getUserType() {return userType;}
 
     public void signUpUserAsClient(Client client, Model.SignUpUserListener listener) {
@@ -72,6 +73,7 @@ public class ModelFirebase {
                 });
     }
 
+    //log in function
     public void logIn(String eMail, String password, View view, Model.LogInListener listener) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
