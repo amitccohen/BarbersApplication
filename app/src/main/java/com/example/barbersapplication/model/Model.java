@@ -7,6 +7,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.auth.User;
 
+import java.util.List;
+
 public class Model {
 
     public static final Model instance = new Model();
@@ -38,5 +40,34 @@ public class Model {
 
     public void logOut(){
         modelFirebase.logOut();
+    }
+
+    public void logInLastUser(View view){
+        modelFirebase.logInLastUser(view);
+    }
+
+    public void addBarberToBarberShop(Barber barber){
+        modelFirebase.addBarberToBarberShop(barber);
+    }
+
+    public interface getBarbersListAtCurrBarberShopListener{
+        void onComplete(List<Barber>barbers);
+    }
+    public void getBarbersListAtCurrBarberShop(getBarbersListAtCurrBarberShopListener listener){
+        modelFirebase.getBarbersListAtCurrBarberShop(listener);
+    }
+
+    public interface getBarberShopsListListener{
+        void onComplete(List<BarberShop>barberShops);
+    }
+    public void getBarberShopsList(getBarberShopsListListener listener){
+        modelFirebase.getBarberShopsList(listener);
+    }
+
+    public interface getBarbersListAtBarberShopAsClientListener{
+        void onComplete(List<Barber>barbers);
+    }
+    public void getBarbersListAtBarberShopAsClient(String eMail, getBarbersListAtBarberShopAsClientListener listener){
+        modelFirebase.getBarbersListAtBarberShopAsClient(eMail ,listener);
     }
 }

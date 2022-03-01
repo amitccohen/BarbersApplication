@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.BarberHomePage" >
+    tools:context=".fragments.barberHomePage.BarberHomePage" >
 
     <TextView
         android:id="@+id/barberhomepage_barberstitle_tv"
@@ -22,11 +22,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/barberhomepage_barbers_list_rv"
-        android:layout_width="237dp"
-        android:layout_height="381dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="337dp"
+        android:layout_height="385dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/barberhomepage_barberstitle_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barberhomepage_barberstitle_tv" />
 
     <androidx.appcompat.widget.AppCompatButton

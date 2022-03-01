@@ -24,7 +24,7 @@
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
-        android:text="Add pictures of Barber works"
+        android:text="Add picture of Barber work"
         android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -72,13 +72,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/addbarber_postslist_rv"
-        android:layout_width="317dp"
-        android:layout_height="311dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/addbarber_nameinput_et"
-        app:layout_constraintStart_toStartOf="@+id/addbarber_name_tv"
-        app:layout_constraintTop_toBottomOf="@+id/addbarber_texttoaddphotos_tv" />
+    <ImageView
+        android:id="@+id/addbarber_workpic_iw"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/addbarber_save_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addbarber_texttoaddphotos_tv"
+        tools:src="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

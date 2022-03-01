@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/barberHomePage"
-        android:name="com.example.barbersapplication.fragments.BarberHomePage"
+        android:name="com.example.barbersapplication.fragments.barberHomePage.BarberHomePage"
         android:label="fragment_barber_home_page"
         tools:layout="@layout/fragment_barber_home_page" >
         <action
@@ -71,6 +71,9 @@
             app:destination="@id/logInPage"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_barberHomePage_to_addBarber"
+            app:destination="@id/addBarber" />
     </fragment>
     <fragment
         android:id="@+id/addPicturesOfBarberWorks"
@@ -96,7 +99,13 @@
         android:id="@+id/addBarber"
         android:name="com.example.barbersapplication.fragments.AddBarber"
         android:label="fragment_add_barber"
-        tools:layout="@layout/fragment_add_barber" />
+        tools:layout="@layout/fragment_add_barber" >
+        <action
+            android:id="@+id/action_addBarber_to_barberHomePage"
+            app:destination="@id/barberHomePage"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/choosenBarberPage"
         android:name="com.example.barbersapplication.fragments.ChosenBarberPage"
@@ -162,6 +171,10 @@
         <action
             android:id="@+id/action_barbersListAtBarber_to_choosenBarberPage"
             app:destination="@id/choosenBarberPage" />
+        <argument
+            android:name="eMail"
+            app:argType="string"
+            android:defaultValue="non" />
     </fragment>
     <fragment
         android:id="@+id/bookMeetingPage"

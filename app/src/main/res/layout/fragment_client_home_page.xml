@@ -60,11 +60,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/clienthomepage_barbershopslist_rv"
-        android:layout_width="345dp"
-        android:layout_height="0dp"
+        android:layout_width="342dp"
+        android:layout_height="277dp"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/clienthomepage_mymeetings_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clienthomepage_barbershopslist_tv" />
@@ -72,7 +70,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/clienthomepage_mymeetings_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/shape_selector"
         android:padding="7dp"

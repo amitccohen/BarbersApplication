@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.barbersapplication.R;
@@ -36,11 +37,13 @@ public class ClientHomePageBarbersListAdapter extends RecyclerView.Adapter <Clie
             barbershopName = itemView.findViewById(R.id.barbershop_cell_for_client_home_page_barbershop_name_tv);
             barbershopLocation = itemView.findViewById(R.id.barbershop_cell_for_client_home_page_location_tv);
 
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(itemView.getContext(), "Worked", Toast.LENGTH_SHORT).show();
+                    ClientHomePageDirections.ActionClientHomePageToBarbersListAtBarber action =
+                            ClientHomePageDirections.actionClientHomePageToBarbersListAtBarber();
+                    action.setEMail(barbershops.get(getAdapterPosition()).getBarberEmail());
+                    Navigation.findNavController(v).navigate(action);
                 }
             });
         }

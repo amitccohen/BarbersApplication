@@ -32,7 +32,7 @@ public class LogInPage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_log_in_page, container, false);
-
+        Model.instance.logInLastUser(view);
         TextView signUpAsClientTv = view.findViewById(R.id.loginpage_signupasclient_tv);
         TextView signUpAsBarberTv = view.findViewById(R.id.loginpage_signupasbarber_tv);
         Button loginBtn = view.findViewById(R.id.loginpage_login_btn);
