@@ -1,6 +1,7 @@
 package com.example.barbersapplication.model;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Handler;
 import android.util.Log;
@@ -23,12 +24,19 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -233,6 +241,8 @@ public class ModelFirebase {
             Map<String, Object> DBUser = new HashMap<>();
             DBUser.put("barberName", barber.getBarberName());
             DBUser.put("workPicUri", String.valueOf(barber.getWorkPic()));
+            DBUser.put("description", barber.getDescription());
+            DBUser.put("comments", Arrays.asList());
             db.collection(user.getUid()).document(barber.getBarberName())
                     .set(DBUser)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -263,8 +273,9 @@ public class ModelFirebase {
                             if (task.isSuccessful()){
                                 for (QueryDocumentSnapshot documentSnapshot: task.getResult()) {
                                     String barberName = documentSnapshot.get("barberName").toString();
+                                    String description = documentSnapshot.get("description").toString();
                                     Uri workPicUri = Uri.parse(documentSnapshot.get("workPicUri").toString());
-                                    Barber barber = new Barber(barberName,workPicUri);
+                                    Barber barber = new Barber(barberName,workPicUri,description);
                                     barbers.add(barber);
 
                                 }
@@ -309,36 +320,148 @@ public class ModelFirebase {
     public void getBarbersListAtBarberShopAsClient(String eMail ,Model.getBarbersListAtBarberShopAsClientListener listener) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        FirebaseUser user = mAuth.getCurrentUser();
         db.collection("users").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        List<BarberShop>barberShops =new LinkedList<>();
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot documentSnapshot: task.getResult()) {
-                                if (documentSnapshot.get("barberEmail").equals(eMail)){
-                                    String uId = documentSnapshot.getId();
-                                    db.collection(user.getUid()).get()
-                                            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                                    List<Barber>barbers =new LinkedList<>();
-                                                    if (task.isSuccessful()){
-                                                        for (QueryDocumentSnapshot documentSnapshot: task.getResult()) {
-                                                            String barberName = documentSnapshot.get("barberName").toString();
-                                                            Uri workPicUri = Uri.parse(documentSnapshot.get("workPicUri").toString());
-                                                            Barber barber = new Barber(barberName,workPicUri);
-                                                            barbers.add(barber);
+                                if (documentSnapshot.get("barberEmail") != null){
+                                    if (documentSnapshot.get("barberEmail").toString().equals(eMail)){
+                                        String uId = documentSnapshot.getId();
+                                        db.collection(uId).get()
+                                                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                        List<Barber>barbers =new LinkedList<>();
+                                                        if (task.isSuccessful()){
+                                                            for (QueryDocumentSnapshot documentSnapshot: task.getResult()) {
+                                                                String barberName = documentSnapshot.get("barberName").toString();
+                                                                String description = documentSnapshot.get("description").toString();
+                                                                Uri workPicUri = Uri.parse(documentSnapshot.get("workPicUri").toString());
+                                                                Barber barber = new Barber(barberName,workPicUri,description);
+                                                                barbers.add(barber);
+                                                            }
                                                         }
+                                                        listener.onComplete(barbers);
                                                     }
-                                                    listener.onComplete(barbers);
-                                                }
-                                            });
+                                                });
+                                    }
                                 }
                             }
                         }
                     }
                 });
+    }
+
+    public void getBarber(String userName,String email, Model.getBarberListener listener) {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users").get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()){
+                            for (QueryDocumentSnapshot documentSnapshot: task.getResult()) {
+                                if (documentSnapshot.get("barberEmail") != null){
+                                    if (documentSnapshot.get("barberEmail").toString().equals(email)){
+                                        String uId = documentSnapshot.getId();
+                                        db.collection(uId).get()
+                                                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                        if (task.isSuccessful()){
+                                                            for (QueryDocumentSnapshot documentSnapshot: task.getResult()) {
+                                                                if (userName.equals(documentSnapshot.get("barberName").toString())){
+                                                                    String barberName = documentSnapshot.get("barberName").toString();
+                                                                    String description = documentSnapshot.get("description").toString();
+                                                                    Uri workPicUri = Uri.parse(documentSnapshot.get("workPicUri").toString());
+                                                                    if (!documentSnapshot.get("comments").toString().isEmpty()){
+                                                                        List<String>list = Collections.singletonList(documentSnapshot.get("comments").toString());
+                                                                        Log.d("TAGSplit",list.get(0));
+                                                                        String comm = list.get(0);
+                                                                        comm = comm.substring(1, comm.length() - 1);
+                                                                        List<String>comments = Arrays.asList(comm.split(","));
+                                                                        Barber barber = new Barber(barberName,workPicUri, comments,description);
+                                                                        listener.onComplete(barber);
+                                                                    }
+                                                                    else {
+                                                                        Barber barber = new Barber(barberName,workPicUri,description);
+                                                                        listener.onComplete(barber);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                });
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+    }
+
+    public void addComment(Comments comment,String userName,String email,Model.addCommentListener listener) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users").get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()){
+                            for (QueryDocumentSnapshot documentSnapshot: task.getResult()) {
+                                if (documentSnapshot.get("barberEmail").toString().equals(email)){
+                                    String uId = documentSnapshot.getId();
+                                    Map<String, Object> DBUser = new HashMap<>();
+                                    DBUser.put("barberName", userName);
+                                    DBUser.put("workPicUri", "TEST");
+                                    DBUser.put("comments", Arrays.asList(comment,"sdafsad"));
+                                    db.collection(uId).document(userName)
+                                            .set(DBUser)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Log.d("TAG", "DocumentSnapshot successfully written!");
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.w("TAG", "Error writing document", e);
+                                                }
+                                            });
+                                    listener.onComplete();
+                                }
+                                break;
+                            }
+                        }
+                    }
+                });
+    }
+
+    public void uploadImage(Bitmap imageBmp, String name, final Model.UploadImageListener listener){
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        final StorageReference imagesRef = storage.getReference().child("barbersWork").child(name);
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        imageBmp.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+        byte[] data = byteArrayOutputStream.toByteArray();
+        UploadTask uploadTask = imagesRef.putBytes(data);
+        uploadTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onComplete(null);
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                imagesRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Uri downloadUri = uri;
+                        listener.onComplete(downloadUri.toString());
+                    }
+                });
+            }
+        });
     }
 }

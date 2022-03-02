@@ -42,6 +42,7 @@ public class ClientHomePage extends Fragment {
         View view = inflater.inflate(R.layout.fragment_client_home_page, container, false);
         data = new ArrayList<>();
 
+        Button mapBtn = view.findViewById(R.id.clienthomepage_seebarbersatmap_btn);
         Button myMeetingBtn = view.findViewById(R.id.clienthomepage_mymeetings_btn);
         Button searchBtn = view.findViewById(R.id.clienthomepage_search_btn);
         RecyclerView barbershopList = view.findViewById(R.id.clienthomepage_barbershopslist_rv);
@@ -58,6 +59,12 @@ public class ClientHomePage extends Fragment {
             }
         });
 
+        mapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_clientHomePage_to_mapFragment);
+            }
+        });
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override

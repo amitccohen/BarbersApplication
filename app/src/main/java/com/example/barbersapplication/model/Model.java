@@ -1,11 +1,10 @@
 package com.example.barbersapplication.model;
 
-import android.content.Context;
+
+import android.graphics.Bitmap;
+
 import android.view.View;
 
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.auth.User;
 
 import java.util.List;
 
@@ -69,5 +68,26 @@ public class Model {
     }
     public void getBarbersListAtBarberShopAsClient(String eMail, getBarbersListAtBarberShopAsClientListener listener){
         modelFirebase.getBarbersListAtBarberShopAsClient(eMail ,listener);
+    }
+
+    public interface getBarberListener{
+        void onComplete(Barber barber);
+    }
+    public void getBarber(String userName,String email, getBarberListener listener){
+        modelFirebase.getBarber(userName, email,listener);
+    }
+
+    public interface addCommentListener{
+        void onComplete();
+    }
+    public void addComment(Comments comment,String username,String email,addCommentListener listener){
+        modelFirebase.addComment(comment,username,email,listener);
+    }
+
+    public interface UploadImageListener{
+        void onComplete(String url);
+    }
+    public void uploadImage(Bitmap imageBmp, String name,final UploadImageListener listener) {
+        modelFirebase.uploadImage(imageBmp, name, listener);
     }
 }

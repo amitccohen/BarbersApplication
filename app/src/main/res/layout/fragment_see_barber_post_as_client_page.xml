@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.SeeBarberPostAsClientPage" >
+    tools:context=".fragments.SeeBarberPostAsClient.SeeBarberPostAsClientPage" >
 
     <TextView
         android:id="@+id/seebarberpostasclient_barberpostheadline_tv"
@@ -20,63 +20,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/seebarberpostasclient_postlist_rv"
-        android:layout_width="337dp"
-        android:layout_height="212dp"
-        android:layout_marginTop="24dp"
+    <TextView
+        android:id="@+id/seebarberpostasclient_barberpostdescription_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="descrioption"
+        android:textColor="@color/appblue"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seebarberpostasclient_barberpostheadline_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/seebarberpostasclient_post_iv" />
 
     <TextView
         android:id="@+id/seebarberpostasclient_comments_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Comments"
         android:textColor="@color/appblue"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="@+id/seebarberpostasclient_barberpostheadline_tv"
-        app:layout_constraintTop_toBottomOf="@+id/seebarberpostasclient_postlist_rv" />
+        app:layout_constraintTop_toBottomOf="@+id/seebarberpostasclient_barberpostdescription_tv2" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/seebarberpostasclient_commentslist_rv"
         android:layout_width="339dp"
         android:layout_height="139dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/seebarberpostasclient_postlist_rv"
-        app:layout_constraintStart_toStartOf="@+id/seebarberpostasclient_postlist_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seebarberpostasclient_comments_tv" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/seebarberpostasclient_addcomment_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:padding="7dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/shape_selector"
-        android:text="Add"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/seebarberpostasclient_post_iv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seebarberpostasclient_commentslist_rv" />
-
-    <EditText
-        android:id="@+id/seebarberpostasclient_addcomment_et"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Please enter your comment"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/seebarberpostasclient_addcomment_btn"
-        app:layout_constraintEnd_toStartOf="@+id/seebarberpostasclient_addcomment_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/seebarberpostasclient_addcomment_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/seebarberpostasclient_barberpostheadline_tv"
+        tools:src="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

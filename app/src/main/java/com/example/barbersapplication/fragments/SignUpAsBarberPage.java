@@ -5,6 +5,8 @@ import static android.app.Activity.RESULT_OK;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -31,6 +33,8 @@ import com.example.barbersapplication.model.BarberShop;
 import com.example.barbersapplication.model.Client;
 import com.example.barbersapplication.model.Model;
 
+import java.io.File;
+
 
 public class SignUpAsBarberPage extends Fragment {
     ImageView logo;
@@ -42,8 +46,6 @@ public class SignUpAsBarberPage extends Fragment {
     public SignUpAsBarberPage() {
         // Required empty public constructor
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -80,6 +82,7 @@ public class SignUpAsBarberPage extends Fragment {
                 pictureFullSizeResultLauncher.launch("image/*");
             }
         });
+
 
 
         return view;

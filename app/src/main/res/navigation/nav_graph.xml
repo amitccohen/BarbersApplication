@@ -74,6 +74,9 @@
         <action
             android:id="@+id/action_barberHomePage_to_addBarber"
             app:destination="@id/addBarber" />
+        <action
+            android:id="@+id/action_barberHomePage_to_calendarToAddBarbersToWork"
+            app:destination="@id/calendarToAddBarbersToWork" />
     </fragment>
     <fragment
         android:id="@+id/addPicturesOfBarberWorks"
@@ -117,6 +120,17 @@
         <action
             android:id="@+id/action_choosenBarberPage_to_seeBarberPostAsClientPage"
             app:destination="@id/seeBarberPostAsClientPage" />
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue="non" />
+        <argument
+            android:name="eMail"
+            app:argType="string"
+            android:defaultValue="non" />
+        <action
+            android:id="@+id/action_choosenBarberPage_to_messageAfterBookingMettingPage"
+            app:destination="@id/messageAfterBookingMettingPage" />
     </fragment>
     <fragment
         android:id="@+id/editMeetingPage"
@@ -138,14 +152,28 @@
         <action
             android:id="@+id/action_messageAfterBookingMettingPage_to_clientHomePage"
             app:destination="@id/clientHomePage"
-            app:popUpTo="@id/clientHomePage"
+            app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/seeBarberPostAsClientPage"
-        android:name="com.example.barbersapplication.fragments.SeeBarberPostAsClientPage"
+        android:name="com.example.barbersapplication.fragments.SeeBarberPostAsClient.SeeBarberPostAsClientPage"
         android:label="fragment_see_barber_post_as_client_page"
-        tools:layout="@layout/fragment_see_barber_post_as_client_page" />
+        tools:layout="@layout/fragment_see_barber_post_as_client_page" >
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue="non" />
+        <action
+            android:id="@+id/action_seeBarberPostAsClientPage_to_clientHomePage"
+            app:destination="@id/clientHomePage"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="eMail"
+            app:argType="string"
+            android:defaultValue="non" />
+    </fragment>
     <fragment
         android:id="@+id/clientHomePage"
         android:name="com.example.barbersapplication.fragments.clientHomePage.ClientHomePage"
@@ -162,10 +190,13 @@
             app:destination="@id/logInPage"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_clientHomePage_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
     <fragment
         android:id="@+id/barbersListAtBarber"
-        android:name="com.example.barbersapplication.fragments.BarbersListAtBarber"
+        android:name="com.example.barbersapplication.fragments.BarbersListAtBarber.BarbersListAtBarber"
         android:label="fragment_barbers_list_at_barber"
         tools:layout="@layout/fragment_barbers_list_at_barber" >
         <action
@@ -202,5 +233,16 @@
         <action
             android:id="@+id/action_myMeetingsPage_to_editMeetingPage"
             app:destination="@id/editMeetingPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.barbersapplication.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_clientHomePage"
+            app:destination="@id/clientHomePage"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

@@ -5,14 +5,20 @@
       <map>
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/barbers_cell_for_barber_home_page.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/barbershop_cell_for_client_home_page.xml" value="0.2296875" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/comments_cell.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_add_barber.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_barber_home_page.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_barbers_list_at_barber.xml" value="0.2296875" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_calendar_to_add_barbers_to_work.xml" value="0.23489583333333333" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_chosen_barber_page.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_client_home_page.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_edit_barber.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_edit_meeting_page.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_log_in_page.xml" value="0.2296875" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_map.xml" value="0.23489583333333333" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_maps.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_message_after_sign_up_as_barber_shop.xml" value="0.2296875" />
+        <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_see_barber_post_as_client_page.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_sign_up_as_barber_page.xml" value="0.2296875" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/layout/fragment_sign_up_as_client_page.xml" value="0.35144927536231885" />
         <entry key="..\:/Users/amitc/AndroidStudioProjects/BarbersApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />

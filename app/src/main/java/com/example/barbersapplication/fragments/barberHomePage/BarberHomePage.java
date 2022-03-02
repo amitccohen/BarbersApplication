@@ -41,6 +41,7 @@ public class BarberHomePage extends Fragment {
         data = new ArrayList<>();
         Button logOutBtn = view.findViewById(R.id.barberhomepage_logout_btn);
         Button addBarberBtn = view.findViewById(R.id.barberhomepage_addbarber_btn);
+        Button calBtn = view.findViewById(R.id.barberhomepage_calendar_btn);
         RecyclerView barbersList = view.findViewById(R.id.barberhomepage_barbers_list_rv);
 
         Model.instance.getBarbersListAtCurrBarberShop(new Model.getBarbersListAtCurrBarberShopListener() {
@@ -70,6 +71,12 @@ public class BarberHomePage extends Fragment {
             }
         });
 
+        calBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_barberHomePage_to_calendarToAddBarbersToWork);
+            }
+        });
 
         logOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
